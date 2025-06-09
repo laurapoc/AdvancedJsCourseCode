@@ -175,6 +175,11 @@ class Cat {
     this.age = age;
   }
 
+  // Static method
+  static meow() {
+    return `${this.species} says Meow!`; // "this" refers to the class, not the instance
+  }
+
   static species = "Cat"; // static property, not instance property, but class property
 }
 
@@ -183,3 +188,50 @@ const firstCat = new Cat("Whiskers", "Siamese", 2);
 console.log(firstCat.name); // "Whiskers", instance property
 console.log(firstCat.species); // undefined
 console.log(Cat.species); // "Cat", static property can be accessed through the class itself
+console.log(firstCat.breed); // "Siamese",  instance property
+
+// ================
+// STATIC METHODS
+
+// JS gives "static" methods, where the method is called on a Class, not an object - therefore it cannot access individual Object attributes
+
+console.log(Cat.meow()); // "Meow!", static method called on the class
+
+class MyMath {
+  static add(a, b) {
+    return a + b;
+  }
+  static multiply(a, b) {
+    return a * b;
+  }
+}
+
+console.log(MyMath.add(5, 3)); // 8
+console.log(MyMath.multiply(5, 3)); // 15
+
+class Cat2 {
+  constructor(catName, breed, age) {
+    this.name = catName;
+    this.breed = breed;
+    this.age = age;
+  }
+
+  static registerStray() {
+    const names = ["Whiskers", "Mittens", "Shadow", "Simba"];
+
+    const name = choiceCat(names); // returns a random cat name from the array
+
+    return new Cat2(name, "Unknown Breed", 0); // creates a new Cat2 instance with the random name
+  }
+
+  meow() {
+    return `${this.name} says Meow!`;
+  }
+}
+
+function choiceCat(arr) {
+  const randIndex = Math.floor(Math.random() * arr.length);
+  return arr[randIndex];
+}
+
+console.log(Cat2.registerStray()); // creates a new Cat2 instance with a random name from the array
