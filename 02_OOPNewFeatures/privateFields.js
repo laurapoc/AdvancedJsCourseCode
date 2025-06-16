@@ -9,4 +9,4 @@ class Circle {
 }
 
 const myCircle = new Circle(10);
-console.log(myCircle.#radius);
+console.log(Circle.#radius);  // This will throw an error because #radius is a private field and cannot be accessed outside the class

@@ -9,4 +9,4 @@ class MyClass {
 }
 
 const myClass = new MyClass();
-myClass.publicMethod();
+myClass.publicMethod(); // This will call the private method
