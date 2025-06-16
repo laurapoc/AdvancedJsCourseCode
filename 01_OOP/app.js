@@ -111,7 +111,7 @@ class BankAccount {
     this.balance = balance;
   }
 
-  // funcitons, placed in a class, are methods(formally, instance methods).
+  // functions, placed in a class, are methods(formally, instance methods).
   // they have access to the instance of the class through "this" prefix
   // they take arguments and can return values like any oter function
   deposit(amt) {

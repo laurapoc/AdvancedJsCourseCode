@@ -3,6 +3,7 @@ function Dog(name, breed) {
   this.breed = breed;
 }
 
+// prototype is an object that is shared by all instances of the Dog class
 Dog.prototype.bark = function () {
   return `${this.name} says woof!`;
 };
@@ -16,7 +17,7 @@ Dog.prototype.sleep = function () {
 //   score: 99,
 //   greet() {
 //     console.log("HIII!");
-//   },
+//   }, 
 // };
 
 // class Dog {

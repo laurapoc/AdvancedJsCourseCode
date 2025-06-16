@@ -17,4 +17,4 @@ class Circle {
 
 const myCircle = new Circle(10);
 myCircle.radius = -99;
-console.log(myCircle.radius);
+console.log(myCircle.radius); // This will throw an error because we are trying to set a negative radius
