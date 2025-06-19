@@ -13,6 +13,7 @@
 //   };
 // }
 
+// immediately invoked function expression (IIFE) to create a closure
 const counter = (function () {
   let count = 0;
   return {

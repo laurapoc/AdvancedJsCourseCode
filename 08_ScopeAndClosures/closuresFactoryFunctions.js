@@ -6,6 +6,8 @@ function createExponentFunction(exponent) {
 
 const square = createExponentFunction(2);
 const cube = createExponentFunction(3);
+const squareOfFour = square(4); // 16
+const cubeOfTwo = cube(2); // 8
 
 function uniqueIdGenerator(prefix) {
   let id = 0;
